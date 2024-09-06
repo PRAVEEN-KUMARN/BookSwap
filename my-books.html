@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="my-books.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">BookSwap</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse-books.html">Browse Books</a></li>
+                <li><a href="my-books.html">My Books</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="my-books">
+            <h1>My Book Collection</h1>
+            <button id="add-book">Add New Book</button>
+            <div class="book-grid" id="book-grid">
+                <!-- User's books will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Modal for Adding/Editing Books -->
+        <div id="book-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title">Add Book</h2>
+                <form id="book-form">
+                    <input type="hidden" id="book-id">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+
+                    <label for="cover">Cover Image URL</label>
+                    <input type="text" id="cover" name="cover">
+
+                    <!-- New section for taking a picture -->
+                    <div class="camera-section">
+                        <button type="button" id="take-picture">Take Picture</button>
+                        <video id="video" width="320" height="240" autoplay style="display:none;"></video>
+                        <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+                        <img id="captured-image" src="" alt="Captured Image" style="display:none;">
+                    </div>
+
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre" required>
+
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="available">Available</option>
+                        <option value="swapped">Swapped</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+
+                    <button type="submit" id="save-book">Save Book</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

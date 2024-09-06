@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Swapping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">BookSwap</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search books...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Section -->
+        <section class="banner">
+            <h1>Welcome to BookSwap!</h1>
+            <p>Swap books with other readers and discover new stories.</p>
+            <a href="#" id="get-started" class="cta-button">Get Started</a>
+        </section>
+
+        <!-- Browse Books Section -->
+        <section class="browse-books">
+            <h2>Browse Available Books</h2>
+            <div class="book-grid">
+                <!-- Display books dynamically here -->
+                <div class="book-card">
+                    <img src="book-cover.jpg" alt="Book Cover">
+                    <h3>Book Title</h3>
+                    <p>Author Name</p>
+                    <button>Request Swap</button>
+                </div>
+                <!-- Repeat for each book -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Include JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - BookSwap</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="profile.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">BookSwap</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse-books.html">Browse Books</a></li>
+                <li><a href="my-books.html">My Books</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="profile">
+            <h1>My Profile</h1>
+            <div class="profile-info">
+                <img id="profile-picture" src="placeholder-profile.png" alt="Profile Picture">
+                <div class="user-details">
+                    <h2 id="username">Username</h2>
+                    <p id="email">Email: user@example.com</p>
+                    <p id="location">Location: City, Country</p>
+                    <button id="edit-profile">Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>My Books</h2>
+                <div class="book-grid">
+                    <!-- Books will be dynamically loaded here -->
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h2>Activities</h2>
+                <ul id="activity-list">
+                    <!-- Activities will be dynamically loaded here -->
+                </ul>
+            </div>
+
+            <div class="profile-section">
+                <h2>Settings</h2>
+                <button id="change-password">Change Password</button>
+                <button id="logout">Logout</button>
+            </div>
+        </section>
+    </main>
+
+</html>
